@@ -17,14 +17,16 @@
             <div class="score">Score: <span id="score">0</span></div>
         </div>
         <img src="play_button.png" alt="Play Button" class="play-button" onclick="increaseScore()">
-      
     </div>
-  <div id="ton-connect" class="connect-button"></div>
+    <div id="ton-connect" class="connect-button"></div>
     <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
     <script>
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-            manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
-            buttonRootId: 'ton-connect'
+            manifestUrl: 'https://buttermun.github.io/tonopoly/tonconnect-manifest.json',
+            buttonRootId: 'ton-connect',
+            uiOptions: {
+                twaReturnUrl: 'https://t.me/tonopolygame_bot'
+            }
         });
 
         async function connectToWallet() {
