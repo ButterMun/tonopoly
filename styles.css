@@ -2,7 +2,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: aliceblue
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Делаем контейнер на всю высоту видимого экрана */
 }
 
 .tabs {
@@ -24,7 +28,6 @@ body {
 .container {
     text-align: center;
     position: relative;
-    margin-top: 40vh; /* 20% от высоты экрана сверху */
 }
 
 .score {
@@ -36,7 +39,14 @@ body {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    position: relative;
-    top: 150%; /* Смещаем изображение на 50% относительно родительского контейнера */
-    
+    margin: 0 auto; /* Центрируем кнопку по горизонтали */
+}
+
+.connect-button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0px auto; /* Центрируем кнопку по горизонтали и задаем отступы сверху и снизу */
 }

@@ -13,16 +13,24 @@
         <div class="tab">Friends</div>
     </div>
     <div class="container">
-        <div class="score">Score: <span id="score">0</span></div>
+        <div class="score-container">
+            <div class="score">Score: <span id="score">0</span></div>
+        </div>
         <img src="play_button.png" alt="Play Button" class="play-button" onclick="increaseScore()">
+      
     </div>
-
+  <div id="ton-connect" class="connect-button"></div>
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
     <script>
-        let score = 0;
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
+            buttonRootId: 'ton-connect'
+        });
 
-        function increaseScore() {
-            score++;
-            document.getElementById('score').textContent = score;
+        async function connectToWallet() {
+            const connectedWallet = await tonConnectUI.connectWallet();
+            // Do something with connectedWallet if needed
+            console.log(connectedWallet);
         }
     </script>
 </body>
