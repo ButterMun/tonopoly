@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.tab {
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    margin-top: 40vh; /* 20% от высоты экрана сверху */
+}
+
+.score {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.play-button {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    top: 50%; /* Смещаем изображение на 50% относительно родительского контейнера */
+    transform: translateY(-50%); /* Для точного центрирования по вертикали */
+}
